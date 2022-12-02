@@ -1,4 +1,4 @@
-
-*.dat
 *.cmd
 *template*
+test*
+output*

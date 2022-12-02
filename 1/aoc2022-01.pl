@@ -2,13 +2,13 @@
 #
 # aoc2022-01
 #
-# advent of code 2022 
+# advent of code 2022 | ed chester | @bocs@twt.cymru
 # day 1
 # part 1 & 2
 #
 # "it's easy to be enthusiastic at this point."
 # 
-# massive props to Eric W for another year of near-insanity in the 
+# Massive props to Eric W for another year of near-insanity in the 
 # pursuit of superior code skillz.
 #
 

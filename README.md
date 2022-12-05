@@ -39,7 +39,10 @@ OK, no, in fairness I am tempted to make a proper library function for this. Not
 # Day 5 - Supply Stacks
 _"Surely this is the first turning point..."_
 
-I looked at this and thought Towers of Hanoi, and then thought 2 things - first: i can never remember how of Towers of Hanoi is supported to work, and second: this isn't quite like that anyway. What this _is_ is just a list of lists, and we can push, pop and shift our way through them. When we're done with that, we can just see what's on top:
+I looked at this and thought Towers of Hanoi, and then thought 2 things - first: i can never remember how of Towers of Hanoi is supposed to work, and second: this isn't quite like that anyway. What this _is_, is just a list of lists, and we can push, pop and shift our way through them. The key is to look at the input vertically from the outset, which means mapping stuff into lists vertically while reading the input file horizontally. When we're done with all the moving around, we can just see what's on top.
+
+The core of the work is just these 2 lines: pick up a crate, drop a crate.
+
 ```
 my $movingCrate = shift @{$stacks[$from]};
 unshift $stacks[$to]->@*, $movingCrate;

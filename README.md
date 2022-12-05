@@ -27,7 +27,7 @@ _"A nice spot of ASCII arithmetic..."_
 
 Done in a stupid rush on a way out to the wedding of my friend Tanya. Ugly; not cleaning it up.
 
-## Day 4 - 
+## Day 4 - Camp Cleanup
 _"One of those that looks so easy in part 1, that you're designing a multi-depth hash
 for part 2 from the get-go just in case. Turns out it wasn't needed either."_
 
@@ -36,7 +36,12 @@ Oh - and its happened - regex kicks things off nicely to extract the values. I b
 
 OK, no, in fairness I am tempted to make a proper library function for this. Not happening today though. But since I've mentioned it, I'll put the only possibly reusable functions I've written so far in a package and add that to the repo. Likely need it exactly a year from now.
 
-# Day 5 -
-_" "_
+# Day 5 - Supply Stacks
+_"Surely this is the first turning point..."_
 
+I looked at this and thought Towers of Hanoi, and then thought 2 things - first: i can never remember how of Towers of Hanoi is supported to work, and second: this isn't quite like that anyway. What this _is_ is just a list of lists, and we can push, pop and shift our way through them. When we're done with that, we can just see what's on top:
+```
+my $movingCrate = shift @{$stacks[$from]};
+unshift $stacks[$to]->@*, $movingCrate;
+```		
 

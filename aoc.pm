@@ -37,4 +37,25 @@ sub isRangeSubset($$$$) {
 	return $rv;
 }
 
+sub unionsize($$) {
+	# return integer that is the number of elements in first 
+	# referenced array that are also present in the second
+	# *there must be a better way to do this*
+	my ($a, $b) = @_;
+	my $c = 0;
+	foreach my $i (@$a) {
+		if (grep { $i eq $_ } @$b) {
+			$c++;
+		}
+	}
+	return $c;
+}
+
+sub sortElemAlpha($) {
+	# replace strings within an array by alphabetically
+	# sorted versions of themselves
+	my $arr = shift;
+	return map { join '',sort(split //) } @$arr;
+}
+
 1;

@@ -4,7 +4,15 @@ use warnings;
 use Exporter;
 
 our @ISA = qw( Exporter );
-our @EXPORT = qw( numArrSort halfString inString isRangeSubset);
+our @EXPORT = qw|
+ numArrSort
+ halfString
+ inString
+ isRangeSubset
+ unionsize
+ sortElemAlpha
+ countCharDupes
+|;
 
 # numerical sort of array
 sub numArrSort($) {
@@ -56,6 +64,20 @@ sub sortElemAlpha($) {
 	# sorted versions of themselves
 	my $arr = shift;
 	return map { join '',sort(split //) } @$arr;
+}
+
+sub countCharDupes($) {
+	# return number of a characters in a string that 
+	# appear more than once
+	my $s = shift;
+	my $n = 0;
+	# loop over characters
+	for (my $i = 0; $i < length $s; $i++) {
+		my $c = substr $s, $i, 1;
+		my $count = () = $s =~ /\Q$c/g;
+		if ($count > 1) { $n++; }
+	}
+	return ($n > 0) ? $n - 1 : 0;
 }
 
 1;

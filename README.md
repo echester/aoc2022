@@ -48,3 +48,20 @@ my $movingCrate = shift @{$stacks[$from]};
 unshift $stacks[$to]->@*, $movingCrate;
 ```		
 
+# Day 6 - Tuning Trouble
+
+_"Far too many ways to skin this particular elf-cat. Very much the
+making of a mountain outfrom a molehill."_
+
+I half-started 4 different ways of testing whether a string had any repeated characters before actually finishing any of them, and any of them would have been fine. I think the worrying about part 2 drives towards a generic and elegant solution to part 1, which can be a waste of time. Certainly was today.
+
+- uniquified hash
+- splitting to array and pop-then-test
+- flexible match or smart match
+- simple regex
+
+Here's the cruncher:
+```
+my $count = () = $s =~ /\Q$c/g;
+```
+which i've dropped into a new package function called `countCharDupes()`.

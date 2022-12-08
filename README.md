@@ -65,3 +65,26 @@ Here's the cruncher:
 my $count = () = $s =~ /\Q$c/g;
 ```
 which i've dropped into a new package function called `countCharDupes()`.
+
+# Day 7 
+
+not yet looked
+
+# Day 8 - Treetop Tree House
+
+_ "Well that was embarrassing... going to have to add comments in to stop this kind of fiasco next year... "_
+
+I overthought this for multiple hours alongside normal work. The issue really was
+that the description was correct and made sense, but left some room for different
+interpretations of which trees were visible. A few more example cases would have nailed that early on. 
+The outside-in visibility was straightforward and fast because i did an inelegant thing: replace visible trees by a visibility marker `v`, then count how many `v` I have at the end. This took moments. Then the day happened.
+Then i came back to part 2 and started taking out my many conditions around previous height, previous tree, angle back to the treehouse, _et al._ and once it was grossly simple, it worked. I'd like to say 'lesson learned,' but that'd be a fib.
+Because I did it in perl, and because i did it in an ugly-loopy way, there's no code interest here whatsoever, other than the usefulness of the perl way to deepcopy a 2D array, which is (slightly modded from code for readibility):
+
+```
+my @deep_copy_of_trees = map { [@$_] } @trees;
+```
+Bosh.
+
+
+

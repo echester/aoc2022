@@ -72,7 +72,7 @@ not yet looked :-o
 
 # Day 8 - Treetop Tree House
 
-_ "Well that was embarrassing... going to have to add comments in to stop this kind of fiasco next year... "_
+_"Well that was embarrassing... going to have to add comments in to stop this kind of fiasco next year..."_
 
 I overthought this for multiple hours alongside normal work. The issue really was
 that the description was correct and made sense, but left some room for different

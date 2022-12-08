@@ -68,7 +68,7 @@ which i've dropped into a new package function called `countCharDupes()`.
 
 # Day 7 
 
-not yet looked
+not yet looked :-o
 
 # Day 8 - Treetop Tree House
 
@@ -85,6 +85,4 @@ Because I did it in perl, and because i did it in an ugly-loopy way, there's no 
 my @deep_copy_of_trees = map { [@$_] } @trees;
 ```
 Bosh.
-
-
 

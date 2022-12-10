@@ -12,6 +12,7 @@ our @EXPORT = qw|
  unionsize
  sortElemAlpha
  countCharDupes
+ sgn
 |;
 
 # numerical sort of array
@@ -78,6 +79,11 @@ sub countCharDupes($) {
 		if ($count > 1) { $n++; }
 	}
 	return ($n > 0) ? $n - 1 : 0;
+}
+
+# function that implements signum using the spaceship operator for fun
+sub sgn($) {
+	return shift() <=> 0;
 }
 
 1;

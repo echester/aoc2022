@@ -86,3 +86,26 @@ my @deep_copy_of_trees = map { [@$_] } @trees;
 ```
 Bosh.
 
+# Day 9 - Rope Bridge
+
+_"... because throwing away part 1 was the right thing to do... "_
+
+I started part 1 to asleep, too naïve, and did something fast that worked. For part 1.
+Then the horrors hidden in part 2 clobbered me and I had to leave the thing alone all day (because real work). I took the logic in part 1 and started building functions that did the same thing. 
+Instead of a tail following a head (only), i had a knot following a knot, and that took too long to get working (>1 hour :-o). Anyway, once that was done, it was a small step to make an array of N knots, and there it was. 
+I've kept part 1 code here and separate so you can see how simplistic it was.
+Retrospectively, I've commented everything in part 2, because sometimes that's helpful to others, or to really explain it to yourself and spot improvements.
+There's an obvious improvement here: I was obsessed with arrays of ropes, each of which is an array of knots. We only need 1 rope, so a `map { }` would have been a good way forwards. Fact is - i'm not very confident using `map`. That's probably the thing I should learn before we get any more multidimensional horrors further into the jungle.
+My favourite perl-ish things today were -
+the so-called _spaceship operator_ `<=>`: here used to implement the sign() function:
+```
+shift() <=> 0
+```
+and also the postfix form of foreach, which I use to create the initial rope as a stack of knots:
+```
+push @rope, [0,0] foreach (0 .. shift() - 1);
+
+```
+
+# Day 10 - Cathode-Ray Tube
+

@@ -109,3 +109,19 @@ push @rope, [0,0] foreach (0 .. shift() - 1);
 
 # Day 10 - Cathode-Ray Tube
 
+_"the ringing of horrendous, cracked bells of memory
+as they bash against the broken screen of inscrutible,
+inferior, infuriating, elvish technology"_
+
+Part 1 of this was straightforward, though i made a false start by thinking the cycles overlapped (inputs lines = cycles). I was dealing with that by pushing values to a fifo and getting them out to accumulate into X a cycle later. Totally not relevant.
+
+Part 2 has a bug still in it, but the output was legible enough. The first column of the CRT is shifted, and the first/last pixels seem broken. I am too tired to figure out why. This was good enough.
+
+```
+##....##.####.###..###..####.####..##..#
+..#....#.#....#..#.#..#.#....#....#..#.#
+..#....#.###..#..#.#..#.###..###..#....#
+##.....#.#....###..###..#....#....#....#
+.#..#..#.#....#.#..#....#....#....#..#.#
+..#..##..####.#..#.#....####.#.....##...
+```

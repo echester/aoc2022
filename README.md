@@ -36,7 +36,7 @@ Oh - and its happened - regex kicks things off nicely to extract the values. I b
 
 OK, no, in fairness I am tempted to make a proper library function for this. Not happening today though. But since I've mentioned it, I'll put the only possibly reusable functions I've written so far in a package and add that to the repo. Likely need it exactly a year from now.
 
-# Day 5 - Supply Stacks
+## Day 5 - Supply Stacks
 _"Surely this is the first turning point..."_
 
 I looked at this and thought Towers of Hanoi, and then thought 2 things - first: i can never remember how of Towers of Hanoi is supposed to work, and second: this isn't quite like that anyway. What this _is_, is just a list of lists, and we can push, pop and shift our way through them. The key is to look at the input vertically from the outset, which means mapping stuff into lists vertically while reading the input file horizontally. When we're done with all the moving around, we can just see what's on top.
@@ -48,7 +48,7 @@ my $movingCrate = shift @{$stacks[$from]};
 unshift $stacks[$to]->@*, $movingCrate;
 ```		
 
-# Day 6 - Tuning Trouble
+## Day 6 - Tuning Trouble
 
 _"Far too many ways to skin this particular elf-cat. Very much the
 making of a mountain outfrom a molehill."_
@@ -66,11 +66,11 @@ my $count = () = $s =~ /\Q$c/g;
 ```
 which i've dropped into a new package function called `countCharDupes()`.
 
-# Day 7 
+## Day 7 
 
 not yet looked :-o
 
-# Day 8 - Treetop Tree House
+## Day 8 - Treetop Tree House
 
 _"Well that was embarrassing... going to have to add comments in to stop this kind of fiasco next year..."_
 
@@ -86,7 +86,7 @@ my @deep_copy_of_trees = map { [@$_] } @trees;
 ```
 Bosh.
 
-# Day 9 - Rope Bridge
+## Day 9 - Rope Bridge
 
 _"... because throwing away part 1 was the right thing to do... "_
 
@@ -107,7 +107,7 @@ push @rope, [0,0] foreach (0 .. shift() - 1);
 
 ```
 
-# Day 10 - Cathode-Ray Tube
+## Day 10 - Cathode-Ray Tube
 
 _"the ringing of horrendous, cracked bells of memory
 as they bash against the broken screen of inscrutible,

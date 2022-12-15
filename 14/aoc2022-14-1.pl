@@ -28,14 +28,14 @@ while(<$inf>) {
         my ($v1x, $v1y) = split /,/, $vertices[$i-1];
         my ($v2x, $v2y) = split /,/, $vertices[$i];
 
-        # x stays the same
+        # y stays the same
         if ($v1y == $v2y) {
             for (my $j=min($v1x, $v2x); $j<=max($v1x, $v2x); $j++) {
                 $hardstuff[$j][$v1y]++;
             }
         }
         else {
-            # y stays the same
+            # x stays the same
             for (my $j=min($v1y, $v2y); $j<=max($v1y, $v2y); $j++) {
                 $hardstuff[$v1x][$j]++;
                 if ($j > $maxdepth) { $maxdepth = $j; }

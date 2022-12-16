@@ -1,16 +1,15 @@
 #!/usr/bin/perl
 #
-# aoc2022-14-1
+# aoc2022-14-2
 #
 # advent of code 2022 | ed chester | @bocs@twt.cymru
-# day 14 part 1
+# day 14 part 2
 #
 # "Sometimes even things that look simple and complete will try to lull you into a false 
 # sense of security with their compelling and superficial visage. What they're really
 # doing is lulling you into the corner with a whisky. I came back to this a day later, with 
 # a prod from the community, to realise my $maxdepth thinking was faulty. All good now."
 #
-
 
 use strict;
 use warnings;
@@ -34,7 +33,6 @@ while(<$inf>) {
 
         $maxdepth = max($v1y, $v2y, $maxdepth);
 
-
         # y stays the same
         if ($v1y == $v2y) {
             for (my $j=min($v1x, $v2x); $j<=max($v1x, $v2x); $j++) {
@@ -50,13 +48,19 @@ while(<$inf>) {
     }
 }
 
+# set the floor level
+$maxdepth += 2;
+
 my ($sandx, $sandy) = (500, 0);
 my $grains = 0;
 
 while (1) {
-    # abyss condition! 
-    last if ($sandy > $maxdepth);
-
+    # build floor as we see it
+    if ($sandy == $maxdepth - 1) {
+        $hardstuff[$sandx - 1][$maxdepth]++;
+        $hardstuff[$sandx][$maxdepth]++;
+        $hardstuff[$sandx + 1][$maxdepth]++;
+    }
     # sand down
     if (!defined $hardstuff[$sandx][$sandy+1]) {
         $sandy++;
@@ -66,16 +70,17 @@ while (1) {
         $sandx--;
         $sandy++;
     }
-    # fall right
+    # sand right
     elsif (!defined $hardstuff[$sandx+1][$sandy+1]) {
         $sandx++;
         $sandy++;
     }
-    # can't move, add it as a blockage and drop the next grain
     else {
+        $grains++;
+        # add new stopping condition c.f. part 1
+        last if ($sandx == 500 && $sandy == 0);
         $hardstuff[$sandx][$sandy]++;
         ($sandx, $sandy) = (500, 0);
-        $grains++;
     }
 }
 

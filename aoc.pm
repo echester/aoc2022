@@ -86,4 +86,10 @@ sub sgn($) {
 	return shift() <=> 0;
 }
 
+# function returns 1/0 if value in/out of given range
+sub inRange($$$) {
+	my ($value, $lower, $upper) = @_;
+	return (($value >= $lower) && ($value <= $upper)) ? 1:0;
+}
+
 1;

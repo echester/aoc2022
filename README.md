@@ -125,3 +125,42 @@ Part 2 has a bug still in it, but the output was legible enough. The first colum
 .#..#..#.#....#.#..#....#....#....#..#.#
 ..#..##..####.#..#.#....####.#.....##...
 ```
+
+## Day 11
+
+## Day 12 - Hill Climbing Algorithm
+
+_"One of several unwritten rules of AdventOfCode is: 
+there shall always come a day when the elves want you to have 
+to look up how to code the Dijkstra algorithm. 
+The sooner you learn this rule, if not the algorithm itself
+(as. if.), the less disappointed you'll be
+when that day comes. Regardless, you will still not
+manage to properly package it and comment it ready for
+next year. Loser."_
+
+This is also the first problem that takes long enough to solve 
+that it's interesting to know how long; timer added at the end.
+
+
+## Day 13
+
+## Day 14 - Regolith Reservoir
+
+_"Sometimes even things that look simple and complete will try to lull you into a false  sense of security with their compelling and superficial visage. What they're really
+doing is lulling you into the corner with a whisky. I came back to this a day later, with a prod from the community, to realise my $maxdepth thinking was faulty. All good now."_
+
+
+Here's the line that fixed my previous mania wherein too much of my sand fell into the abyss...
+```
+$maxdepth = max($v1y, $v2y, $maxdepth);
+```
+... I'd previously only updated $maxdepth for vertical rock. Plum. So that was part 1 fixed, and part 2 is a surprisingly straightforward tweak. Which means tomorrow is going to be a serious headmess, because that's how AdventOfCode rolls. Dangit.
+
+## Day 15 - Beacon Exclusion Zone
+
+_"Per the prophency from Day 14, this day exponentially sucked."_
+
+
+
+

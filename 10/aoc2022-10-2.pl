@@ -43,17 +43,17 @@ while(<$inf>) {
 
 	if ($_ =~ /noop/) {
 		$c++;
-		if (inScope($c % 40, $x, 1)) { $crt .= '#';	} 
+		if (inScope(($c % 40), $x, 1)) { $crt .= '#'; } 
 		else { $crt .= '.'; }
 	}
 
 	elsif (/addx\s+(.+)/) {
 		$c++;
-		if (inScope($c % 40, $x, 1)) { $crt .= '#';	} 
+		if (inScope(($c % 40), $x, 1)) { $crt .= '#'; } 
 		else { $crt .= '.'; }
 		$c++;
 		$x += $1;
-		if (inScope($c % 40, $x, 1)) { $crt .= '#';	} 
+		if (inScope(($c % 40), $x, 1)) { $crt .= '#'; } 
 		else { $crt .= '.'; }
 	}
 }

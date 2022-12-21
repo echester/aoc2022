@@ -66,7 +66,7 @@ my $count = () = $s =~ /\Q$c/g;
 ```
 which i've dropped into a new package function called `countCharDupes()`.
 
-## Day 7 
+## Day 7 - No Space Left On Device
 
 not yet looked :-o
 
@@ -126,7 +126,8 @@ Part 2 has a bug still in it, but the output was legible enough. The first colum
 ..#..##..####.#..#.#....####.#.....##...
 ```
 
-## Day 11
+## Day 11 - Monkey in the Middle
+
 
 ## Day 12 - Hill Climbing Algorithm
 
@@ -143,7 +144,7 @@ This is also the first problem that takes long enough to solve
 that it's interesting to know how long; timer added at the end.
 
 
-## Day 13
+## Day 13 - Distress Signal
 
 ## Day 14 - Regolith Reservoir
 
@@ -162,5 +163,33 @@ $maxdepth = max($v1y, $v2y, $maxdepth);
 _"Per the prophency from Day 14, this day exponentially sucked."_
 
 
+## Day 16 - 
+
+_"Its that inflexion point near half-way in terms of gold stars; that uneasy twinge
+that the rate at which you're falling behind is higher than the rate at which you ought to have done laundry and bought nourishment. Maybe the priorities were screwed up from the start. Maybe you can't plan. Maybe there are too many work related deadlines
+festering in the corner of your mind, begging for time and attention. Its also damn
+cold and sitting still coding is horrible. Ice inside the window again today."_
 
 
+## Day 18 - Boiling Boulders
+
+## Day 20 - Grove Positioning System
+
+This was an unnervingly straightforward test. A linked list, or a simulation of one, without the need to actual manage links. 
+
+## Day 21 - Monkey Math
+
+_"For the first time in a long time, I see how to do this straight away."_
+
+Part 1 pretty easy - repeated replacement of strings by values, and when only values remain, eval the expression, and keep going until the root monkey.
+Part 2 however, remains a mystery.
+
+The core is just two hashes, one which keeps calculated values, one which keeps expressions that still need sorting out. Both are indexed on monkey names.
+```
+# store relations
+if (/(\D{4}):(\D{4}.+\D{4})/) { $rels{$1} = $2; }
+# store values
+elsif (/(\D{4}):([+-]?\d+)/) { $vals{$1} = $2; }
+```
+
+## Day 22 - 

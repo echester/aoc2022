@@ -1,4 +1,6 @@
+.gitignore
 *.cmd
 *template*
 test*
 output*
+*.py
